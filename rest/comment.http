@@ -2,6 +2,10 @@
 
 ### 
 
+ GET http://localhost:3000/comments?parentId=65213a9a6d1bae71098be8ba
+
+### 
+
 POST http://localhost:3000/comments
 content-type: application/json
 
