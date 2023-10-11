@@ -30,12 +30,14 @@ export class CommentsService {
     return this.commentModel
       .find({ parent: null })
       .populate(['user', 'parent'])
+      .sort({ createdAt: -1 })
       .exec();
   }
   getCommentsByParentId(parentId: string) {
     return this.commentModel
       .find({ parent: parentId })
       .populate(['user', 'parent'])
+      .sort({ createdAt: -1 })
       .exec();
   }
 
